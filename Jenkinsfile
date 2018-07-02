@@ -35,22 +35,9 @@ node {
 
             sh 'echo $cert > $appName.cert'
             sh 'echo $key > $appName.key'
-
-            env.targertURL = params.targetURL
-            env.loginURL = params.authenticationURL
-            env.method = params.method
-            env.app_user = params.usernameField
-            env.app_pass = params.passwordField
-            env.checkString = params.checkString
-            env.dataFormat = params.dataFormat
        
             echo "Data Format: $dataFormat"
             echo "Data_Format: ${dataFormat}"
-
-            withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'ipam', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
-                env.userIPAM = USERNAME
-                env.passIPAM = PASSWORD
-            }
    }
    
    stage('certificate validation') {
