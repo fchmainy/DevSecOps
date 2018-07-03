@@ -145,7 +145,7 @@ node {
    }
    
    stage('1st Approval') {
-      input 'Please test conscientiously your application before proceeding to next step!'
+       input 'Please test conscientiously your application on https://${qaIP} before proceeding to next step!'
    }
 
    //stage('2nd Approval') {
