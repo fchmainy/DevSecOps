@@ -38,4 +38,6 @@
             user: "{{ bigip_username }}"
             password: "{{ bigip_password }}"
             policyId: "{{ policyId.policyId }}"
+            validate_certs: "{{ validate_certs }}"
+
 
