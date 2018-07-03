@@ -20,6 +20,8 @@
             virtual: "{{appName}}_vs"
             lang: "utf-8"
             enforcementMode: "blocking"
+            validate_certs: "{{ validate_certs }}"
+
 
       - name: get ID
         f5_asm_getPolicyID:
