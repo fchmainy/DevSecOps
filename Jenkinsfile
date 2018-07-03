@@ -35,9 +35,7 @@ node {
 
             sh 'echo $cert > $appName.cert'
             sh 'echo $key > $appName.key'
-       
-            echo "Data Format: $dataFormat"
-            echo "Data_Format: ${dataFormat}"
+
    }
    
    stage('certificate validation') {
