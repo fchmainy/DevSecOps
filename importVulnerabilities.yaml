@@ -17,12 +17,13 @@
         register: policyId
 #        no_log: true
 
-      - name: ENABLE GENERIC DAST
+      - name: ENABLE DAST
         f5_asm_enableDAST:
             server: "{{ inventory_hostname }}"
             policyId: "{{ policyId.policyId }}"
             user: "{{ bigip_username }}"
             password: "{{ bigip_password }}"
+            dast: "ibm-appscan"
             validate_certs: "{{ validate_certs }}"
         delegate_to: localhost
         
