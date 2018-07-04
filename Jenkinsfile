@@ -280,6 +280,6 @@ node {
    
    
    stage('Approval') {
-      input 'Proceed to Production?'
+      input 'Proceed to Production on https://https://$prodIP'
    }
 }
